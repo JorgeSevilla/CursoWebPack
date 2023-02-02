@@ -5,7 +5,7 @@ const copyPlugin = require('copy-webpack-plugin');
 const cssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const terserPlugin = require('terser-webpack-plugin');
 const dotEnv = require('dotenv-webpack');
-const { CleanWebPackPlugin } = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
     entry: './src/index.js',
@@ -78,7 +78,7 @@ module.exports = {
             ]
         }),
         new dotEnv(),
-        new CleanWebPackPlugin(),
+        new CleanWebpackPlugin()
     ],
     optimization: {
         minimize: true,
